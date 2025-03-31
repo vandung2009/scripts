@@ -1,0 +1,329 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden; /* Ngăn cuộn toàn trang */
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.app-logo {
+    max-width: 40px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.content {
+    flex: 1;
+    padding: 0;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.tab-content {
+    padding: 0;
+    height: 100%;
+}
+
+.tab-pane {
+    display: none;
+    height: 100%;
+}
+
+.tab-pane.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.ugphone-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+#me .profile-header.ugphone-card {
+    background: linear-gradient(135deg, #ff6347, #ff8c69);
+    color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#me .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+#me .profile-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+#me .welfare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+#me .tab-pane-content.ugphone-card {
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.ugphone-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#me .tab-pane-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.ugphone-button {
+    background: linear-gradient(135deg, #ff6347, #ff8c69);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ugphone-button:hover {
+    background: linear-gradient(135deg, #e5533d, #ff7f50);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-btn {
+    background: linear-gradient(135deg, #ff0000, #ff4040);
+}
+
+.youtube-btn:hover {
+    background: linear-gradient(135deg, #e60000, #ff3333);
+}
+
+.discord-btn {
+    background: linear-gradient(135deg, #7289da, #5865f2);
+}
+
+.discord-btn:hover {
+    background: linear-gradient(135deg, #6278c9, #4752c4);
+}
+
+#me .me-links.ugphone-links {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#me .me-links .link-btn {
+    margin: 0;
+    width: 100%;
+}
+
+#home .home-content.ugphone-card {
+    text-align: center;
+    padding: 20px;
+    max-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#home .bottom-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+}
+
+#home .bottom-center {
+    width: 100%;
+}
+
+#home .home-content h2.ugphone-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#home .home-content p.ugphone-subtitle {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#home .home-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#home .goto-btn.ugphone-button {
+    width: 120px;
+    margin: 0 auto;
+}
+
+/* Dashboard styling */
+#device-no-vpn .dashboard-content.ugphone-card,
+#device-vpn .dashboard-content.ugphone-card {
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 60px); /* Trừ chiều cao của tab-nav */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 1;
+}
+
+#device-no-vpn .devices-container,
+#device-vpn .devices-container {
+    width: 100%;
+    height: 100%; /* Chiếm toàn bộ chiều cao */
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 0;
+    justify-content: flex-start;
+    white-space: nowrap;
+}
+
+#device-no-vpn .device-item,
+#device-vpn .device-item {
+    width: calc(100% - 20px); /* Chiếm gần hết chiều ngang, trừ margin */
+    height: calc(100% - 20px); /* Chiếm gần hết chiều cao, trừ padding */
+    flex: 0 0 auto;
+    position: relative; /* Để định vị nút Play */
+}
+
+#device-no-vpn .device-inner,
+#device-vpn .device-inner {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF8C00, #FF4500); /* Gradient cam */
+    border: 4px solid #000; /* Viền đen dày 4px */
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#device-no-vpn .device-inner:hover,
+#device-vpn .device-inner:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.device-logo {
+    max-width: 150px; /* Tăng kích thước logo để phù hợp với thiết bị lớn hơn */
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 10px; /* Đặt nút dưới logo */
+    background: linear-gradient(135deg, #32CD32, #228B22); /* Màu xanh lá cây gradient */
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Tăng kích thước nút */
+    border-radius: 15px; /* Bo tròn hơn */
+    cursor: pointer;
+    font-size: 16px; /* Tăng kích thước chữ */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 120px; /* Đặt chiều rộng cố định */
+    text-align: center;
+}
+
+.play-button:hover {
+    background: linear-gradient(135deg, #2E8B57, #228B22);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tab-nav {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    position: sticky;
+    bottom: 0;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+}
+
+.tab-button.active {
+    color: #ff6347;
+}
+
+.tab-button i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.tab-button span {
+    font-size: 12px;
+}
